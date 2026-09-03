@@ -1,0 +1,1109 @@
+    @import url(/variaveis.css);
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--fontDMSans);
+        background-color: var(--bg-main);
+
+        header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 5px 10px;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            backdrop-filter: blur(45px);
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 45px;
+                padding-bottom: 10px;
+                border-bottom: var(--border);
+
+                i {
+                    font-size: 2rem;
+                    color: var(--text-dark);
+                    transition: var(--trans);
+
+                    &:hover {
+                        cursor: pointer;
+                        color: var(--text-muted);
+                    }
+                }
+            }
+
+            nav {
+                height: 0;
+                overflow: hidden;
+            }
+
+            .show {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: calc(100vh - 80px);
+                gap: 5px;
+                margin-top: 10px;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding: 10px 0;
+
+                    li {
+                        width: 200px;
+                        margin: auto;
+                        transition: var(--trans);
+                        border-radius: 10px;
+
+                        .li {
+                            display: flex;
+                            justify-content: center;
+                            padding: 5px 0;
+
+                            a {
+                                text-decoration: none;
+                                color: var(--text-dark);
+                            }
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: var(--bg-card);
+                            box-shadow: 0 0 5px var(--shadow);
+                        }
+                    }
+                }
+
+                .navBottom {
+                    padding: 15px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 250px;
+                    
+                    .navCard {
+                        overflow: hidden;
+                        display: flex;
+                        padding-left: 15px;
+                        justify-content: space-between;
+                        background: radial-gradient(circle at 95% 5%, #fff39a 5%, var(--yellow));
+                        border-radius: 15px;
+                        padding: 10px;
+                        
+                        .A {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            
+                            p {
+                                font-family: var(--fontDMMonoR);
+                                font-size: 0.65rem;
+                                color: var(--text-dark);
+                            }
+                            
+                            span {
+                                font-family: var(--fontFrances);
+                                font-size: 2rem;
+                            }
+                            
+                            .p {
+                                font-family: var(--fontDMSans);
+                                font-size: 0.7rem;
+                            }
+                        }
+
+                        .B {
+                            position: relative;
+                            top: -40px;
+                            left: 25px;
+                        }
+                    }
+
+                    .navText {
+                        margin-top: 25px;
+                        border-radius: 15px;
+                        background-color: var(--bg-card);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 10px;
+                        height: 100px;
+                        background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 45%, var(--text-muted) 0%);
+                        background-position: top;
+                        background-size: 10px 1px;
+                        background-repeat: repeat-x;
+
+                        /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 55%, var(--bg-card) 0%);
+                    background-position: top;
+                    background-size: 15px 1px;
+                    background-repeat: repeat-x; */
+
+                        p {
+                            font-family: var(--fontDMMonoR);
+                            color: var(--text-dark);
+                            font-size: 0.7rem;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            padding: 5px;
+            margin: 60px 5px 5px 5px;
+            display: flex;
+            flex-direction: column;
+
+            .indice {
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .text-indice {
+
+                    p {
+                        font-family: var(--fontDMMonoR);
+                        font-size: 0.75rem;
+                        color: var(--text-light);
+                    }
+
+                    .text-indice-span {
+
+                        p {
+                            font-family: var(--fontFrances);
+                            color: #000;
+                            font-size: 1.8rem;
+                        }
+
+                        span {
+                            color: var(--primary-300);
+                            font-family: var(--fontFrancesI);
+                        }
+                    }
+                }
+
+                .btn-indice {
+                    display: flex;
+                    justify-content: space-evenly;
+                    padding: 15px 0;
+
+                    button {
+                        width: 180px;
+                        padding: 8px 0;
+                        border-radius: 20px;
+                        background-color: transparent;
+                        border: var(--border);
+
+                        a {
+                            color: var(--text-dark);
+                            font-weight: bold;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .btn-indice-black {
+                        background-color: #000;
+
+                        a {
+                            color: var(--bg-main);
+                        }
+                    }
+                }
+            }
+
+            .cards {
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                /* gap: 5px; */
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    border: var(--border);
+                    border-radius: 15px;
+                    padding: 10px;
+                    margin: auto;
+                    width: 300px;
+                    height: 350px;
+                }
+
+                .cardA {
+                    background: radial-gradient(circle at 85% 15%, var(--primary-200), var(--primary-400));
+                    color: var(--bg-card);
+                    transform: rotate(2deg);
+                    box-shadow: 0 0 40px var(--shadow);
+
+                    .blocoA {
+                        display: flex;
+                        justify-content: space-between;
+                        background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, var(--bg-card) 10%);
+                        background-size: 10px 1px;
+                        background-repeat: repeat-x;
+                        background-position: top;
+                        padding-top: 10px;
+
+                        p {
+                            font-size: 0.6rem;
+                        }
+                    }
+
+                    .blocoB {
+                        height: 80px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        font-family: var(--fontFrancesI);
+
+                        p {
+                            color: var(--yellow);
+                        }
+
+                        span {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .blocoC p {
+                        font-size: 0.8rem;
+                    }
+
+                    .blocoD {
+                        height: 45px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        p {
+                            font-size: 0.6rem;
+                            font-family: var(--fontDMMonoR);
+                            letter-spacing: 1px;
+                        }
+
+                        span {
+                            font-family: var(--fontFrances);
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+
+                .cardB {
+                    background-color: var(--bg-card);
+
+                    .bloco {
+                        display: flex;
+                        /* border: var(--border); */
+                    }
+
+                    .blocoA {
+                        justify-content: space-between;
+                        border-bottom: 1px dotted var(--text-muted);
+                        padding-bottom: 10px;
+
+                        p {
+                            font-size: 0.65rem;
+                            font-family: var(--fontDMMonoR);
+                            color: var(--text-muted);
+                            padding-top: 2px;
+                        }
+
+                        .textA {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+
+                            span {
+                                color: var(--text-dark);
+                                font-family: var(--fontFrances);
+                                font-size: 1.2rem;
+                            }
+                        }
+
+                        .textB {
+                            text-align: right;
+                        }
+                    }
+
+                    .blocoB {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 90px;
+                        padding-bottom: 10px;
+
+                        .text {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            text-align: center;
+
+                            p {
+                                font-family: var(--fontDMMonoR);
+                                letter-spacing: 1px;
+                                font-size: 0.6rem;
+                                color: var(--text-muted);
+                            }
+
+                            span {
+                                font-family: var(--fontFrances);
+                                font-size: 1.8rem;
+                            }
+
+                            .p {
+                                font-family: var(--fontDMSans);
+                                color: var(--text-light);
+                            }
+                        }
+                    }
+
+                    .blocoC {
+                        border-top: 1px dotted var(--text-muted);
+                        justify-content: space-between;
+                        height: 80px;
+                        padding: 10px 0 5px 0;
+                        margin-top: -5px;
+
+                        .textA {
+                            font-size: 0.8rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            p {
+                                color: var(--text-dark);
+                            }
+
+                            span {
+                                color: var(--text-light);
+                            }
+                        }
+
+                        .textB {
+                            text-align: right;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            font-size: 0.8rem;
+                        }
+                    }
+
+                    .blocoD {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        height: 70px;
+                        border-top: 1px #000 solid;
+                        padding-top: 10px;
+
+                        .text {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                        }
+
+                        .textA {
+                            color: var(--text-muted);
+                            font-family: var(--fontDMMonoR);
+                            font-size: 0.65rem;
+                        }
+
+                        .textB {
+                            color: var(--text-dark);
+                            text-align: right;
+
+                            p {
+                                font-size: 1.5rem;
+                                font-family: var(--fontFrances);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .blocos {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 35px;
+
+                .bloco {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    margin: auto;
+                    border-radius: 15px;
+                    padding: 10px;
+                    background-color: var(--bg-card);
+                    width: 300px;
+                    height: 200px;
+                    box-shadow: 0 0 5px var(--shadow);
+
+                    .partTop {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .A {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            img {
+                                border-radius: 8px;
+                                padding: 5px;
+                            }
+
+                            p {
+                                font-family: var(--fontDMMonoM);
+                                font-size: 0.75rem;
+                            }
+                        }
+
+                        p {
+                            font-family: var(--fontFrances);
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    .partCenter {
+                        height: 70px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        p {
+                            font-family: var(--fontFrances);
+                        }
+
+                        span {
+                            font-size: 0.7rem;
+                            color: var(--text-muted)
+                        }
+                    }
+
+                    .partBottom {
+
+                        p {
+                            font-size: 0.8rem;
+                            color: var(--text-dark);
+                        }
+                    }
+                }
+
+
+                .blocoA {
+
+                    .partTop {
+
+                        img {
+                            background-color: var(--primary-300);
+                        }
+
+                        p {
+                            color: var(--primary-300);
+                        }
+                    }
+                }
+
+                .blocoB {
+
+                    .partTop {
+
+                        img {
+                            background-color: var(--blue);
+                        }
+
+                        p {
+                            color: var(--blue);
+                        }
+                    }
+
+                    .partBottom {
+
+                        .bottom {
+                            border: var(--border);
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            border-radius: 10px;
+                            margin: 4px 0;
+                            padding: 2px 10px;
+                            background-color: rgba(0, 0, 0, 0.05);
+
+                            p{
+                                font-size: 0.7rem;
+                            }
+
+                            span{
+                                font-size: 0.7rem;
+                            }
+                        }
+
+                        .bottomSub {
+                            display: flex;
+                            align-items: center;
+                            gap: 2px;
+
+                            p {
+                                border: var(--border);
+                                border-radius: 5px;
+                                color: var(--text-light);
+                                padding: 0 5px;
+                                font-size: 0.6rem;
+                            }
+                            
+                        }
+                    }
+                }
+
+                .blocoC {
+
+                    .partTop {
+
+                        img {
+                            background-color: var(--pink);
+                        }
+
+                        p {
+                            color: var(--pink);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 650px) {
+        body {
+            display: flex;
+
+            header {
+                width: 250px;
+                height: 100vh;
+                border-right: var(--border);
+
+                .header {
+                    justify-content: center;
+
+                    i {
+                        display: none;
+                    }
+                }
+
+                nav {
+                    overflow: visible;
+                    width: 240px;
+                    height: 100vh;
+                    margin: 10px -5px;
+                    padding: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        height: 200px;
+
+                        li {
+                            padding: 8px 5px;
+                            transition: var(--trans);
+                            border-radius: 10px;
+
+                            .li {
+                                display: flex;
+                                gap: 2px;
+
+                                a {
+                                    color: var(--text-dark);
+                                    text-decoration: none;
+                                }
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                background-color: var(--bg-card);
+                            }
+                        }
+                    }
+
+                    .navBottom {
+                        height: 250px;
+                        padding: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+
+                        .navCard {
+                            background-color: var(--yellow);
+                            border-radius: 15px;
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 10px;
+                            overflow: hidden;
+
+                            .A {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+
+                                p {
+                                    font-size: 0.7rem;
+                                    font-family: var(--fontDMMonoR);
+                                }
+
+                                span {
+                                    font-family: var(--fontFrances);
+                                    font-size: 1.5rem;
+                                }
+
+                                .p {
+                                    font-family: var(--fontDMSans);
+                                }
+                            }
+
+                            .B {
+                                position: relative;
+                                top: -40px;
+                                left: 20px;
+                            }
+                        }
+
+                        .navText {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            background-color: var(--bg-card);
+                            border-radius: 15px;
+                            padding: 0 10px;
+                            background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, var(--text-muted) 50%);
+                            background-position: top;
+                            background-repeat: repeat-x;
+                            background-size: 15px 1px;
+                            height: 100px;
+
+                            p {
+                                font-size: 0.6rem;
+                                color: var(--text-light);
+                                font-family: var(--fontDMMonoR);
+                            }
+                        }
+                    }
+                }
+            }
+
+            main {
+                margin-left: 255px;
+                position: relative;
+                top: -60px;
+
+                .indice {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .cards {
+                    flex-direction: row;
+                    margin: auto;
+
+                    .card {
+                        min-width: 300px;
+                    }
+
+                    .cardA {
+                        order: 1;
+                    }
+
+                    .cardB {
+                        order: 0;
+                    }
+                }
+
+                .blocos{
+                    flex-direction: row;
+                    width: 90%;
+                    margin: 30px auto;
+                    gap: 40px;
+
+                    .bloco{
+                        min-width: 250px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /*
+    header {
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: var(--border);
+        height: 100vh;
+        padding: 0 10px;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 10px;
+
+            i {
+                display: flex;
+                font-size: 2rem;
+                transition: all 0.2s ease-in;
+                border: var(--border);
+                border-radius: 8px;
+                width: 35px;
+                height: 35px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: var(--bg-card);
+                }
+
+                &:active {
+                    background-color: var(--yello);
+                }
+            }
+        }
+
+        nav {
+            height: 0;
+            overflow: hidden;
+        }
+
+        .show {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            height: auto;
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 200px;
+                padding: 10px 0;
+
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    border-radius: 10px;
+                    transition: all 0.3s ease-in;
+                    /*border: var(--border);*/
+    /*
+
+                    .li {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        /*border: var(--border);*/
+    /*
+    a {
+        text-decoration: none;
+        color: var(--text-dark);
+    }
+
+    &:hover {
+        background-color: var(--bg-card);
+        box-shadow: 0 0 5px var(--shadow);
+    }
+    }
+    }
+    }
+    }
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+
+        section {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .indice {
+
+            .text-indice {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 90px;
+
+                p {
+                    font-family: var(--fontDMMonoM);
+                    letter-spacing: 2px;
+                    color: var(--text-muted);
+                    font-size: 0.7rem;
+                }
+
+                span {
+                    font-family: var(--fontFrances);
+                    font-size: 2.5rem;
+                }
+            }
+
+            .btn-indice {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 40px;
+                gap: 5px;
+
+                button {
+                    padding: 5px 0;
+                    width: 180px;
+                    border-radius: 15px;
+                    border: var(--border);
+                    background-color: var(--bg-main);
+
+                    a {
+                        font-size: 0.75rem;
+                        text-decoration: none;
+                        font-weight: bold;
+                        color: var(--text-dark);
+                        font-family: var(--fontDMSans);
+                    }
+
+                }
+
+                .btn-indice-black {
+                    background-color: var(--text-dark);
+
+                    a {
+                        color: var(--bg-main);
+                    }
+                }
+            }
+        }
+
+        .cards {
+            border: var(--border);
+            display: flex;
+            flex-direction: column;
+
+            .card {
+                border: var(--border);
+                border-radius: 20px;
+                width: 350px;
+                height: 400px;
+                margin: 15px auto;
+                overflow: hidden;
+                box-shadow: 5px 5px 15px var(--shadow);
+
+                .bloco {
+                    margin: 5px;
+                    padding: 15px;
+                }
+            }
+
+            .cardA {
+                background: radial-gradient(circle at 85% 10%, var(--primary-200), var(--primary-400));
+                transform: rotate(2deg);
+
+                .blocoA {
+                    display: flex;
+                    justify-content: space-between;
+                    color: var(--bg-card);
+                    font-family: var(--fontDMMonoR);
+                    margin-top: 20px;
+                    padding-top: 10px;
+                    font-size: 0.7rem;
+                    letter-spacing: 2px;
+                    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 55%, var(--bg-card) 0%);
+                    background-position: top;
+                    background-size: 15px 1px;
+                    background-repeat: repeat-x;
+                }
+
+                .blocoB {
+                    font-family: var(--fontFrancesI);
+
+                    p {
+                        color: var(--yellow);
+                        font-size: 1.2rem;
+                    }
+
+                    span {
+                        color: var(--bg-main);
+                        font-size: 2.4rem;
+                    }
+                }
+
+                .blocoC {
+                    color: var(--bg-card);
+                }
+
+                .blocoD {
+                    color: var(--bg-card);
+
+                    p {
+                        font-family: var(--fontDMMonoM);
+                        font-size: 0.6rem;
+                        letter-spacing: 1px;
+                    }
+
+                    span {
+                        font-family: var(--fontFrances);
+                        font-size: 1.1rem;
+                        line-height: 2;
+                    }
+                }
+            }
+
+            .cardB {
+                background-color: var(--bg-card);
+                transform: rotate(-2deg);
+
+                .blocoA {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.7rem;
+                    font-family: var(--fontDMMonoR);
+                    height: 70px;
+
+                    .textA span {
+                        font-size: 1.2rem;
+                        font-family: var(--fontFrances);
+                        line-height: 2;
+                    }
+
+                    .textB {
+                        text-align: right;
+                        justify-content: right;
+                    }
+                }
+
+                .blocoB {
+                    display: flex;
+                    justify-content: space-between;
+                    text-align: center;
+                    font-size: 0.7rem;
+
+                    .textA {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        height: 100px;
+                    }
+
+                    p {
+                        font-family: var(--fontDMMonoR);
+                        font-size: 0.6rem;
+                    }
+
+                    span {
+                        font-size: 1.8rem;
+                        font-family: var(--fontFrances);
+                    }
+                }
+
+                .blocoC {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 100px;
+
+                    .text {
+                        height: 90px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+
+                    span {
+                        color: var(--text-light);
+                        font-size: 0.8rem;
+                    }
+
+                    .textA {
+                        font-size: 0.9rem;
+
+                    }
+
+                    .textB {
+                        font-family: var(--fontDMMonoR);
+                        text-align: right;
+                        font-size: 0.75rem;
+
+                        span {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+
+                .blocoD {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 70px;
+
+                    .text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 60px;
+                    }
+
+                    .textA {
+                        font-family: var(--fontDMMonoR);
+                        font-size: 0.8rem;
+
+                        span {
+                            font-size: 0.7rem;
+                        }
+                    }
+
+                    .textB {
+                        width: 95px;
+
+                        p {
+                            font-family: var(--fontFrances);
+                            font-size: 1.4rem;
+                            text-align: right;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    */
