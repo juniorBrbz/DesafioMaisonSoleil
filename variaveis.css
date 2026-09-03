@@ -1,26 +1,26 @@
 @font-face {
     font-family: Frances;
-    src: url(/assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    src: url(assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
 }
 
 @font-face {
     font-family: Frances I;
-    src: url(/assets/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    src: url(assets/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
 }
 
 @font-face {
     font-family: DMMono M;
-    src: url(/assets/fonts/dm-mono/DMMono-Medium.ttf);
+    src: url(assets/fonts/dm-mono/DMMono-Medium.ttf);
 }
 
 @font-face {
     font-family: DMMono R;
-    src: url(/assets/fonts/dm-mono/DMMono-Regular.ttf);
+    src: url(assets/fonts/dm-mono/DMMono-Regular.ttf);
 }
 
 @font-face {
     font-family: DMSans;
-    src: url(/assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf);
+    src: url(assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf);
 }
 
 :root{
